@@ -11,4 +11,8 @@ function deleteTask(pTasksList, pId) {
         return { status: true, msg: 'Tarea borrada' };
     }
     return { status: false, msg: 'No hay tarea que borrar' }
-} 
+}
+
+
+const filterByPriority = (pTasksList, pPriority) => pTasksList.filter(task => task.priority.includes(pPriority))
+

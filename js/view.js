@@ -2,8 +2,10 @@ const sectionUl = document.querySelector('.liContainer')
 const formAddtask = document.querySelector('#formtask');
 const spanNumTasks = document.querySelector('#numtasks');
 const search = document.querySelector('#search');
-const button = document.querySelector('#button')
+const button = document.querySelector('#button');
+const selectPriority = document.querySelector('#selectPriority');
 const empty = document.querySelector('.empty');
+
 
 const arrayTasks = [];
 
@@ -74,4 +76,17 @@ function removeTask(event) {
     }
 }
 
+selectPriority.addEventListener('change', (e) => {
+    let priority = e.target.value;
+    let listaFiltrada = filterByPriority(tasksList, priority);
+    printTasks(listaFiltrada, sectionUl)
+})
+
+
+
+
+
+
+
 localStorage.setItem('TasksList1', JSON.stringify(arrayTasks));
+
