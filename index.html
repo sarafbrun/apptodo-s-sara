@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App todo's Sara</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/controlador.js"></script>
     <script src="./js/model.js"></script>
 </head>
@@ -14,8 +15,8 @@
     <header>
         <div class="container">
             <h1>Listado de tareas</h1>
-            <form action="formSearch">
-                <input type="text" name="letter" placeholder="Introduce la tarea">
+            <form action="addtask" id="formtask">
+                <input type="text" name="letter" placeholder="Introduce la tarea" id="addtask">
 
                 <select name="importance">
                     <option value="">Selecciona el grado de importancia</option>
@@ -23,15 +24,21 @@
                     <option value="mensual">Mensual</option>
                     <option value="diaria">Diaria</option>
                 </select>
-                <button class="addbtn" type="sumbit" value="Guardar tarea"></button>
+                <button class="addbtn" type="sumbit" value="addbtn">Guardar</button>
             </form>
+            <input type="text" name="search" id="search" placeholder="Busca la tarea...">
+
     </header>
     <hr>
     <main>
         <h2>Listado de tareas pendientes - <span id="numtasks">X tareas</span></h2>
         <section>
-            <div class="li-container">
+            <div class="liContainer">
                 <ul>
+                    <li>Hacer la cama</li>
+                    <li>Bañar al perro</li>
+                    <li>Ir a comprar</li>
+                    <li>Hacer la comida</li>
 
                 </ul>
             </div>

@@ -1,4 +1,6 @@
-const input = document.querySelector('input');
+const sectionUl = document.querySelector('.liContainer ul')
+const inputAddtask = document.querySelector('#addtask');
+const form = document.querySelector('#formtask')
 const addbtn = document.querySelector('.addbtn');
-const ul = document.querySelector('ul');
+const inputSearch = document.querySelector('#search')
 const empty = document.querySelector('.empty');
