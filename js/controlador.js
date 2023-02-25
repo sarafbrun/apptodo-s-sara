@@ -1,10 +1,14 @@
-function addTask(pTasksList, pTask) {
-    let repeatedTask = pTasksList.some(task => task.tittle === pTask.tittle)
-    if (!repeatedTask) {
-        pTask.idTask = idTask;
-        pTasksList.push(pTasksList);
-        return { status: true, msg: "" }
-    } else {
-        return { status: false, msg: "La tarea no puede estar repetida" }
+
+
+const filterByName = (pTasksList, pLetter) => pTasksList.filter(task => task.tittle.toLowerCase().includes(pLetter.toLowerCase()))
+
+
+
+function deleteTask(pTasksList, pId) {
+    let posicion = pTasksList.findIndex(task => task.idTask === pId);
+    if (posicion !== -1) {
+        pTasksList.splice(posicion, 1)
+        return { status: true, msg: 'Tarea borrada' };
     }
-}
+    return { status: false, msg: 'No hay tarea que borrar' }
+} 

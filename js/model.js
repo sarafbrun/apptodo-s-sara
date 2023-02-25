@@ -1,18 +1,18 @@
-const idTask = 3;
+let ID = 4;
 
-tasksList = [
+const tasksList = [
     {
-        idTask: 0,
+        idTask: 1,
         tittle: 'Estudiar',
         priority: 'urgente'
     },
     {
-        idTask: 1,
+        idTask: 2,
         tittle: 'Dormir',
         priority: 'diaria'
     },
     {
-        idTask: 2,
+        idTask: 3,
         tittle: 'Salir a comer',
         priority: 'mensual'
     }
