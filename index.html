@@ -16,34 +16,51 @@
         <div class="container">
             <h1>Listado de tareas</h1>
             <form id="formtask">
-                <input type="text" placeholder="Introduce la tarea" name="addtask">
+                <input id="input" type="text" placeholder="Introduce la tarea" name="addtask">
                 <select name="importance">
                     <option value="">Selecciona el grado de importancia</option>
                     <option value="urgente">Urgente</option>
                     <option value="mensual">Mensual</option>
                     <option value="diaria">Diaria</option>
                 </select>
-                <input type="submit" value="GUARDAR" class="btn">
+                <input type="submit" value="GUARDAR" class="btnSave">
             </form>
-            <div class="searchSelect">
-                <h3>Búsqueda por letra o palabra</h3>
-                <input type="text" name="search" id="search" placeholder="Busca la tarea...">
-                <h3>Búsqueda por urgencia</h3>
+            <h3>Búsqueda por letra o palabra</h3>
+            <input type="text" name="search" id="search" placeholder="Busca la tarea...">
+            <h3>Búsqueda por urgencia</h3>
+            <div class="referenciaColores">
                 <select id="selectPriority">
                     <option value="">Selecciona el grado de urgencia</option>
                     <option value="urgente">Urgente</option>
                     <option value="mensual">Mensual</option>
                     <option value="diaria">Diaria</option>
                 </select>
+                <div class="colores">
+                    <div>
+                        <div class="rojo"></div>
+                        <p>Urgente</p>
+                    </div>
+
+                    <div>
+                        <div class="azul"></div>
+                        <p>Mensual</p>
+                    </div>
+                    <div>
+                        <div class="verde"></div>
+                        <p>Diaria</p>
+                    </div>
+                </div>
             </div>
+        </div>
 
     </header>
     <hr>
-    <main>
-        <h2>Listado de tareas pendientes - <span id="numtasks"> tareas</span></h2>
-        <section>
-            <div class="liContainer">
-                <!-- <ul>
+    <div class="container">
+        <main>
+            <h2>Listado de tareas pendientes - <span id="numtasks"></span> tareas</span></h2>
+            <section>
+                <div class="liContainer">
+                    <!-- <ul>
                     <li>Pasear perro
                         <button>
                     </li>
@@ -51,12 +68,13 @@
                         <button>
                     </li>
                 </ul> -->
-            </div>
-            <div class="empty">
-                <p>No hay tareas pendientes.</p>
-            </div>
-        </section>
-    </main>
+                </div>
+                <div class="empty">
+                    <p>No hay tareas pendientes.</p>
+                </div>
+            </section>
+        </main>
+    </div>
     </div>
 
 

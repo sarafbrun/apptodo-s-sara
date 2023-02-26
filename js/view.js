@@ -18,7 +18,8 @@ function printTasks(pTasksList, pSection) {
 function printOneTask(pTask, pSectionDom) {
     const ul = document.createElement('ul')
     const li = document.createElement('li')
-    li.textContent = pTask.tittle;
+    const p = document.createElement('p')
+    p.textContent = pTask.tittle;
     const button = document.createElement('button');
     button.textContent = 'X';
     button.dataset.id = pTask.idTask;
@@ -26,9 +27,10 @@ function printOneTask(pTask, pSectionDom) {
 
     button.addEventListener('click', removeTask)
 
-    li.classList.add = pTask.priority;
+    li.id = pTask.priority;
 
     ul.appendChild(li);
+    li.appendChild(p);
     li.appendChild(button);
 
     pSectionDom.appendChild(ul)
@@ -52,6 +54,9 @@ function addTask(event) {
 
         let task = tasksList.push(newTask);
         printOneTask(newTask, sectionUl);
+        arrayTasks.push(newTask);
+        console.log(arrayTasks)
+        //localStorage.setItem(('arrayTasks', JSON.stringify(arrayTasks)))
     } else {
         alert('Debe rellenar el campo de la tarea')
     }
@@ -88,5 +93,5 @@ selectPriority.addEventListener('change', (e) => {
 
 
 
-localStorage.setItem('TasksList1', JSON.stringify(arrayTasks));
+
 
