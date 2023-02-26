@@ -55,8 +55,8 @@ function addTask(event) {
         let task = tasksList.push(newTask);
         printOneTask(newTask, sectionUl);
         arrayTasks.push(newTask);
-        console.log(arrayTasks)
-        //localStorage.setItem(('arrayTasks', JSON.stringify(arrayTasks)))
+        //console.log(arrayTasks)
+        localStorage.setItem('mistareas', JSON.stringify(arrayTasks))
     } else {
         alert('Debe rellenar el campo de la tarea')
     }
