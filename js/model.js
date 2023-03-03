@@ -1,7 +1,7 @@
-let ID = 4;
+let ID = 1;
 
-const tasksList = [
-    {
+let tasksList = [
+    /* {
         idTask: 1,
         tittle: 'Estudiar',
         priority: 'urgente'
@@ -15,5 +15,5 @@ const tasksList = [
         idTask: 3,
         tittle: 'Salir a comer',
         priority: 'mensual'
-    }
+    } */
 ]
